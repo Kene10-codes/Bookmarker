@@ -44,7 +44,7 @@ body {
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
-  }
+}
 }
 .container-narrow > hr {
   margin: 30px 0;
@@ -54,6 +54,9 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron h2 {
+  font-size: 26px;
 }
 .jumbotron .btn {
   padding: 14px 24px;

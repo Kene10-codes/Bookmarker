@@ -71,8 +71,8 @@ const fetchBookmarks = () => {
 
       bookmarkResults.innerHTML += `<div class="well">
                                      <h3 class="text-light">${name}
-                                     <a class="btn btn-primary mr-1" target="_blank" href="${url}">Visit</a>
-                                     <a onclick="deleteBookmark(\'${url}\')" class="btn btn-danger" href="#">Delete</a>
+                                     <a class="btn btn-primary  mr-1" style="width: 80px; height: 45px; target="_blank" href="${url}">Visit</a>
+                                     <a onclick="deleteBookmark(\'${url}\')" style="width: 80px; height: 45px;" class="btn btn-danger" href="#">Delete</a>
                                      </h3>
                                     </div>`
 
@@ -86,7 +86,8 @@ const validateForm = (siteName, siteUrl) => {
         return false;
       }
   
-      var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
+      var expression = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi; 
+
       var regex = new RegExp(expression)
   
       if(!siteUrl.match(regex)){
